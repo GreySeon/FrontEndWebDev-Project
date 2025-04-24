@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EventsService } from '../services/events.service';
-import { IonMenuButton, IonContent, IonHeader, IonTitle, IonToolbar, IonButtons } from '@ionic/angular/standalone';
+import { IonMenuButton, IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonList, IonItem, IonItemDivider, IonLabel, IonItemGroup, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-events',
   templateUrl: './events.page.html',
   styleUrls: ['./events.page.scss'],
   standalone: true,
-  imports: [IonMenuButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule],
+  imports: [IonCardContent, IonCardTitle, IonCardSubtitle, IonCardHeader, IonCard, IonMenuButton, IonButtons, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule],
   providers: [EventsService],
 })
 export class EventsPage implements OnInit {
@@ -20,7 +20,7 @@ export class EventsPage implements OnInit {
   ngOnInit() {
     this.eventsService.getEvents().subscribe((data) => {
       console.log('Event data loaded:', data);
-      // this.events = data.events; // depends on actual structure
+      this.events = data.Events; // depends on actual structure
     });
   }
 
