@@ -1,0 +1,56 @@
+.intro-text {
+  color: maroon;                     // Main text color
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+// ===== Centered Toolbar Title =====
+.center-title {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  
+  
+  // ===== Social Buttons Wrapper =====
+  .social-buttons {
+    display: flex;
+    flex-direction: row;       // Arrange buttons in a row
+    justify-content: center;   // Center horizontally
+    align-items: center;       // Align vertically
+    gap: 16px;                 // Space between buttons
+    padding: 16px;
+    flex-wrap: wrap;           // Wrap on small screens
+  }
+  
+  
+  // ===== Social Button Styling =====
+  .social-buttons ion-button {
+    flex: 1 1 auto;
+    max-width: 150px;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+  }
+  
+  
+  // ===== Facebook Button =====
+  .facebook {
+    --background: #1877f2;
+    --color: #ffffff;
+  }
+  
+  
+  // ===== Instagram Button =====
+  .instagram {
+    --background: #e1306c;
+    --color: #ffffff;
+  }
