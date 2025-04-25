@@ -12,6 +12,7 @@ import { archiveOutline, archiveSharp, informationCircleOutline, informationCirc
   imports: [FormsModule,  IonImg, RouterLink, RouterLinkActive, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet],
 })
 export class AppComponent {
+
   public appPages = [
     { title: 'About', url: '/about', icon: 'information-circle' },
     { title: 'Events', url: '/events', icon: 'trophy' },
@@ -19,6 +20,7 @@ export class AppComponent {
     { title: 'Archived', url: '/archived', icon: 'archive' },
   ];
 
+  // Adding default ionic icons
   constructor() {
     addIcons({ informationCircleOutline, informationCircleSharp, trophyOutline, trophySharp, imagesOutline, imagesSharp, archiveOutline, archiveSharp });
   }

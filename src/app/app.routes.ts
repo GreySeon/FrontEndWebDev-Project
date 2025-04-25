@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+// Routes to other pages from the menu
 export const routes: Routes = [
   {
     path: '',

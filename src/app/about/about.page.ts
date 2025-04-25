@@ -15,12 +15,12 @@ export class AboutPage implements OnInit {
 
   constructor() { }
 
-  // Open Facebook in the browser
+  // Open Facebook in the browser using plugin
   async openFacebook() {
     await Browser.open({ url: 'https://www.facebook.com/profile.php?id=100057095784280' });
   }
 
-  // Open Instagram in the browser
+  // Open Instagram in the browser using plugin
   async openInstagram() {
     await Browser.open({ url: 'https://www.instagram.com/tribal_running/?hl=en' });
   }

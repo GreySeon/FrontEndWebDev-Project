@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- Dynamic population of ionic cards with data -->
   <ion-card *ngFor="let event of events">
     <ion-card-header>
       <ion-card-subtitle>{{event.type}}</ion-card-subtitle>

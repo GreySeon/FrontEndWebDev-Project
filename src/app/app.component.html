@@ -1,25 +1,31 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">      
+
+    <ion-menu contentId="main-content" type="overlay">  
       <ion-content>
         <ion-list id="menu-list">
-          <ion-img src="../assets/images/logo.png"
-          alt="Tribal Running logo"></ion-img>
+
+          <ion-img src="../assets/images/logo.png" alt="Tribal Running logo"></ion-img>
+
           <ion-note>Events organiser for all.
             Free coached sessions for all abilities.
             A voice for marginalised!</ion-note>
 
-          @for (p of appPages; track p; let i = $index) {
+          <!-- Dynamic generation of menu items -->
+          @for (p of appPages; track p) {
             <ion-menu-toggle auto-hide="false">
+              <!-- Use of router link for navigation to appropriate pages -->
               <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
                 <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-                <ion-label>{{ p.title }}</ion-label>
+                <ion-label>{{ p.title }}</ion-label> <!-- Interpolation -->
               </ion-item>
             </ion-menu-toggle>
           }
+          
         </ion-list>
       </ion-content>
     </ion-menu>
+
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>

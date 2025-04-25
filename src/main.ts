@@ -6,9 +6,8 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { addIcons } from 'ionicons';
 import { logoFacebook, logoInstagram } from 'ionicons/icons';
-import { isDevMode } from '@angular/core';
-import { provideServiceWorker } from '@angular/service-worker';
 
+// Adding built-in ionic icons for social medias
 addIcons({
   'logo-facebook': logoFacebook,
   'logo-instagram': logoInstagram,
@@ -19,9 +18,6 @@ bootstrapApplication(AppComponent, {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
-    provideHttpClient(), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          }),
+    provideHttpClient(),
   ],
 });
